@@ -127,6 +127,53 @@
         </v-card>
       </section>
 
+      <section id="resources" class="section">
+        <h2>Ressources utiles</h2>
+
+        <v-list density="comfortable" bg-color="transparent" class="pa-0 text-left">
+          <v-list-item
+            href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            target="_blank"
+            prepend-icon="mdi-web"
+          >
+            <v-list-item-title>WCAG - Web Content Accessibility Guidelines (W3C)</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item
+            href="https://accessibilite.numerique.gouv.fr/"
+            target="_blank"
+            prepend-icon="mdi-file-document-outline"
+          >
+            <v-list-item-title>RGAA - Référentiel Général d'Amélioration de l'Accessibilité</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item
+            href="https://design.numerique.gouv.fr/outils/memo-dev/"
+            target="_blank"
+            prepend-icon="mdi-clipboard-check-outline"
+          >
+            <v-list-item-title>Mémo développeur — Bonnes pratiques accessibilité</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item
+            href="https://disic.github.io/guide-integrateur/"
+            target="_blank"
+            prepend-icon="mdi-book-open-variant"
+          >
+            <v-list-item-title>Guide de l'intégrateur — DISIC</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item
+            href="https://www.systeme-de-design.gouv.fr/version-courante/fr"
+            target="_blank"
+            prepend-icon="mdi-palette-outline"
+          >
+            <v-list-item-title>DSFR — Système de Design de l'État</v-list-item-title>
+          </v-list-item>
+
+        </v-list>
+        </section>
+
       <!-- Section Principes POUR -->
       <section id="principles" class="section">
         <h2>Les 4 principes : POUR</h2>
