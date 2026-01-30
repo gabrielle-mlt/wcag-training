@@ -52,15 +52,6 @@ const route = useRoute()
         >
           Atelier
         </v-btn>
-
-        <v-btn
-          to="/correction"
-          :class="{ 'nav-active': route.path === '/correction' }"
-          variant="text"
-          class="nav-btn"
-        >
-          Correction
-        </v-btn>
       </nav>
 
       <v-spacer></v-spacer>
