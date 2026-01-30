@@ -187,7 +187,7 @@
               <v-card-title class="text-h6 px-0 pt-0">{{ principle.title }}</v-card-title>
               <v-card-text class="px-0 pb-0">
                 <p class="text-body-2 text-medium-emphasis mb-3">{{ principle.description }}</p>
-                <v-list density="compact" bg-color="transparent" class="pa-0">
+                <v-list density="compact" bg-color="transparent" class="text-left pa-0">
                   <v-list-item
                     v-for="item in principle.items"
                     :key="item"
