@@ -61,7 +61,7 @@ const route = useRoute()
         <v-btn
           icon="mdi-github"
           variant="text"
-          href="https://github.com"
+          href="https://github.com/gabrielle-mlt/wcag-training"
           target="_blank"
           color="primary"
         ></v-btn>
