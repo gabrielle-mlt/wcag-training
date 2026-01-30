@@ -16,7 +16,8 @@ const vuetify = createVuetify({
     elevation: 0,
     border : 0,
     bordered : false,
-    rounded: 'lg'
+    rounded: 'lg',
+    ripple: false
     }
   }
 })

@@ -52,6 +52,15 @@ const route = useRoute()
         >
           Atelier
         </v-btn>
+
+        <v-btn
+          to="/simulation"
+          :class="{ 'nav-active': route.path === '/simulation' }"
+          variant="text"
+          class="nav-btn"
+        >
+          Simulation
+        </v-btn>
       </nav>
 
       <v-spacer></v-spacer>
