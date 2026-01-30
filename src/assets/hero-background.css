@@ -1,0 +1,145 @@
+/* ==================== HERO BACKGROUND ==================== */
+
+/* Hero card is a glass panel - no solid background */
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.10),
+    0 8px 24px 0 rgba(0, 0, 0, 0.12),
+    0 16px 48px 0 rgba(0, 0, 0, 0.10);
+}
+
+/* Content stays on top */
+.hero-card .hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ==================== FIXED BACKGROUND BUBBLES ==================== */
+
+/* Container: fixed fullscreen, decorative only */
+.bg-bubbles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.bg-bubbles .bubble {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Circle 1: Large cyan-blue - top right */
+.bg-bubbles .bubble-1 {
+  width: 1200px;
+  height: 1200px;
+  background: #1bb7ff21;
+  top: -600px;
+  right: -550px;
+  filter: blur(300px);
+}
+
+/* Circle 2: Medium purple - bottom left */
+.bg-bubbles .bubble-2 {
+  width: 500px;
+  height: 500px;
+  background: #8652ff3f;
+  bottom: -20px;
+  left: -100px;
+  filter: blur(450px);
+}
+
+/* Circle 3: Small indigo - center right */
+.bg-bubbles .bubble-3 {
+  width: 450px;
+  height: 450px;
+  background: #383bff2f;
+  top: 50%;
+  right: 15%;
+  filter: blur(300px);
+}
+
+/* Circle 4: Medium blue - top left */
+.bg-bubbles .bubble-4 {
+  width: 400px;
+  height: 400px;
+  background: #3784ff3c;
+  top: -50px;
+  left: 33%;
+  filter: blur(300px);
+}
+
+/* Slow floating animations */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -15px); }
+  50% { transform: translate(-10px, 20px); }
+  75% { transform: translate(15px, 10px); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-25px, 10px); }
+  66% { transform: translate(15px, -20px); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(10px, 25px); }
+  40% { transform: translate(-15px, -10px); }
+  60% { transform: translate(20px, -5px); }
+  80% { transform: translate(-5px, 15px); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, -15px); }
+}
+
+.bg-bubbles .bubble-1 { animation: float-1 25s ease-in-out infinite; }
+.bg-bubbles .bubble-2 { animation: float-2 30s ease-in-out infinite; }
+.bg-bubbles .bubble-3 { animation: float-3 35s ease-in-out infinite; }
+.bg-bubbles .bubble-4 { animation: float-4 20s ease-in-out infinite; }
+
+/* ==================== LIQUID GLASS BORDER ==================== */
+
+/* Gradient rim border on the hero card (same as example .glass-card::before) */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background:
+    linear-gradient(120deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.25) 30%,
+      rgba(255, 255, 255, 0.10) 70%,
+      rgba(255, 255, 255, 0.7) 100%
+    ),
+    linear-gradient(300deg,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.10) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.25) inset;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.5;
+}

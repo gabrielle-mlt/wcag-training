@@ -1,0 +1,154 @@
+.rules-page {
+  min-height: calc(100vh - 64px);
+}
+
+.rules-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ==================== TOC ==================== */
+.rules-page .toc {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.rules-page .toc.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.rules-page .toc a {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.rules-page .toc a:hover {
+  color: #1e40af;
+  background: rgba(30, 64, 175, 0.05);
+}
+
+.rules-page .toc a.active {
+  color: #1e40af;
+  background: rgba(30, 64, 175, 0.1);
+  border-left-color: #1e40af;
+}
+
+/* ==================== SECTIONS ==================== */
+.rules-section {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.rules-section:first-of-type {
+  border-top: none;
+}
+
+.rule-card {
+  border-left: 3px solid #e2e8f0;
+}
+
+/* ==================== CODE BLOCKS ==================== */
+.code-block {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2d2d2d;
+}
+
+.code-header {
+  background: #1e1e2e;
+  padding: 0.4rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #383850;
+}
+
+.code-header .v-btn {
+  color: #a0a0b0 !important;
+}
+
+.code-header .v-btn:hover {
+  color: #fff !important;
+}
+
+.code-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.code-block--bad .code-label {
+  color: #f87171;
+}
+
+.code-block--good .code-label {
+  color: #4ade80;
+}
+
+.code-block--bad .code-header {
+  border-bottom-color: rgba(248, 113, 113, 0.2);
+}
+
+.code-block--good .code-header {
+  border-bottom-color: rgba(74, 222, 128, 0.2);
+}
+
+.code-body {
+  background: #282840;
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.code-body code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  color: #e2e8f0;
+  white-space: pre;
+  tab-size: 2;
+}
+
+/* Subtle accent border on left */
+.code-block--bad {
+  border-left: 3px solid #ef4444;
+}
+
+.code-block--good {
+  border-left: 3px solid #22c55e;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1200px) {
+  .rules-page .toc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .rules-content {
+    padding: 2rem 1rem;
+  }
+}

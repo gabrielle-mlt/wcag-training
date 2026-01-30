@@ -1,0 +1,19 @@
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  server: {
+    hmr: {
+      overlay: true,
+      protocol: 'ws'
+    },
+    watch: {
+      usePolling: false
+    }
+  },
+  optimizeDeps: {
+    include: ['vue', 'vue-router', 'vuetify']
+  }
+})

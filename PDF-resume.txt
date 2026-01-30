@@ -1,0 +1,66 @@
+
+
+Eléments obligatoires, structuration, navigation et liens
+Raccourci vers le contenu principal
+12.7 – Un lien d’évitement ou d’accès
+rapide à la zone de contenu principal est
+présent
+Hors cas particuliers des sites one-page,
+sauf si ce lien s’y avère utile
+➢ Fournir un lien direct vers la balise <main>
+ou le landmark role=“main”
+➢ Rendre ce lien visible au moins à la prise
+de focus (mécanisme de « skipnav »)
+
+Eléments obligatoires, structuration, navigation et liens
+Navigation au clavier
+12.8 – L’ordre de tabulation est cohérent
+➢ Porter une attention particulière aux positionnement
+CSS, zones masquées, widgets ARIA...
+➢ Limiter l’usage des tabindex > 0 (source de problème)
+12.9 – La navigation ne contient pas de piège au
+clavier
+➢ Eviter les boucles et fournir des échappatoires si
+nécessaire (ex. tabindex itinérant, voir chapitre sur les
+scripts)
+
+Eléments obligatoires, structuration, navigation et liens
+Raccourcis clavier
+12.10 – Les raccourcis clavier n’utilisant qu’une seule touche (lettre minuscule ou
+majuscule, ponctuation, chiffre ou symbole) sont contrôlables par l’utilisateur
+➢ Activer les raccourcis des composants uniquement au focus clavier sur ce composant.
+➢ Prévoir un mécanisme pour désactiver ou configurer le raccourci clavier
+
+Eléments obligatoires, structuration, navigation et liens
+Navigation dans les contenus additionnels
+12.11 – Si nécessaire, les contenus additionnels apparaissant au survol,
+à la prise de focus ou à l’activation d’un composant d’interface sont
+atteignables au clavier
+A
+02Eléments obligatoires,
+structuration,
+navigation et liens
+Partie 4
+Liens
+(RGAA 4 – Thématique 6)
+
+Eléments obligatoires, structuration, navigation et liens
+Identification des liens
+6.1 – Chaque lien est explicite
+S’applique aux liens contenant du texte seul, une image, une image + un texte, ainsi qu’au liens SVG
+➢ Utiliser un intitulé permettant (seul ou en contexte) de comprendre la fonction du lien
+Hors liens ambigus pour tout le monde
+➢ S’assurer que le nom accessible (*) contient au moins l’intitulé visible
+Hors ponctuation et symboles autres que mathématiques (ex. « > » pour « Suivant »)
+→ à tester
+(*) Intitulé restitué par les AT, correspondant à : aria-labelledby > aria-label > contenu du lien > title
+A
+
+Eléments obligatoires, structuration, navigation et liens
+Robustesse des liens
+6.2 – Chaque lien (à l’exception des ancres) a un intitulé
+➢ Insérer un texte à l’intérieur de la balise <a>…</a> en le
+plaçant si besoin hors écran par CSS.
+Note : le recours à l’attribut alt peut suffire, mais pas celui de title.
+Conseil : Tester la restitution par les AT des liens riches
+(i.e. contenant plusieurs éléments : image, texte, bouton…)
